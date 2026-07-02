@@ -1,155 +1,150 @@
-# RagaAI Catalyst — Enterprise Dashboard
+<div align="center">
+  <h1>⚡ RagaAI Catalyst — Enterprise LLM Observability Platform</h1>
+  
+  <p>
+    <strong>A next-generation, high-performance web dashboard for LLM evaluation, tracing, and guardrails.</strong>
+  </p>
 
-A professional Next.js 14 frontend for the RagaAI Catalyst LLM observability platform.
+  <p>
+    <a href="#features">Features</a> •
+    <a href="#architecture">Architecture</a> •
+    <a href="#quick-start">Quick Start</a> •
+    <a href="#deployment">Deployment</a> •
+    <a href="#contributing">Contributing</a>
+  </p>
 
----
+  <p>
+    <img src="https://img.shields.io/badge/Next.js-14.2.5-black?style=flat-square&logo=next.js" alt="Next.js" />
+    <img src="https://img.shields.io/badge/TypeScript-5.5-blue?style=flat-square&logo=typescript" alt="TypeScript" />
+    <img src="https://img.shields.io/badge/TailwindCSS-3.4-38B2AC?style=flat-square&logo=tailwind-css" alt="Tailwind CSS" />
+    <img src="https://img.shields.io/badge/Framer_Motion-11.3-black?style=flat-square&logo=framer" alt="Framer Motion" />
+    <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="License" />
+  </p>
+</div>
 
-## What is this?
+<br/>
 
-This dashboard gives you a beautiful web UI to manage everything in RagaAI Catalyst:
+## 🎯 Overview
 
-- **Projects** — create and manage your LLM projects
-- **Traces** — view every LLM call recorded by LangChain, LlamaIndex, OpenAI, etc.
-- **Evaluations** — run Faithfulness, Hallucination, Relevance and 20+ metrics
-- **Datasets** — upload CSVs, manage schema mappings
-- **Prompts** — version and manage prompt templates
-- **Guardrails** — PII, toxicity, hallucination filters
-- **Red Teaming** — automated adversarial testing
-- **Synthetic Data** — generate training data with GPT-4o or Claude
-- **API Keys** — store provider keys securely
-- **Settings** — configure base URL, credentials, theme
+RagaAI Catalyst is an enterprise-grade LLM operations (LLMOps) platform. This repository contains the official frontend web application, built with a modern React stack to provide a blazing-fast, secure, and intuitive interface for AI engineers and data scientists.
 
----
-
-## Tech Stack
-
-| Tool | Purpose |
-|---|---|
-| Next.js 14 | React framework with App Router |
-| TypeScript | Type safety |
-| Tailwind CSS | Styling |
-| Framer Motion | Animations |
-| Recharts | Charts and graphs |
-| Zustand | Global state |
-| React Query | API data fetching |
-| Lucide Icons | Icon set |
-| Sonner | Toast notifications |
+Whether you are tracing complex agentic workflows, running offline evaluations, or configuring real-time safety guardrails, this dashboard provides complete visibility and control over your generative AI applications.
 
 ---
 
-## Setup — Step by Step
+## ✨ Core Features
 
-### Step 1 — Make sure you have Node.js installed
+*   **🔍 Agentic Tracing:** Deep introspection into LLM pipelines (LangChain, LlamaIndex, OpenAI, CrewAI). Monitor latency, token usage, and step-by-step agent decisions.
+*   **🧪 Advanced Evaluations:** Execute robust offline evaluations using 20+ built-in metrics including Faithfulness, Hallucination, and Context Relevance.
+*   **🛡️ Dynamic Guardrails:** Configure and deploy real-time guardrails to prevent PII leakage, toxicity, and prompt injections.
+*   **🗄️ Dataset Management:** Upload, version, and manage golden datasets for continuous testing and fine-tuning.
+*   **⚔️ Automated Red Teaming:** Run adversarial testing suites to uncover vulnerabilities in your LLM models before production deployment.
+*   **🧬 Synthetic Data Generation:** Seamlessly generate domain-specific training data utilizing state-of-the-art foundation models.
 
+---
+
+## 🏗️ Architecture & Tech Stack
+
+This application is built with a focus on performance, type safety, and exceptional user experience.
+
+### Frontend Stack
+- **Framework:** [Next.js 14](https://nextjs.org/) (App Router)
+- **Language:** [TypeScript](https://www.typescriptlang.org/) (Strict Mode)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/) & Radix UI Primitives
+- **State Management:** [Zustand](https://github.com/pmndrs/zustand)
+- **Data Fetching:** [TanStack React Query](https://tanstack.com/query/latest)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Data Visualization:** [Recharts](https://recharts.org/)
+
+### Security & Performance
+- **Edge Routing:** Optimized route segment configs.
+- **Client-side Caching:** Intelligent query invalidation via React Query.
+- **Responsive Design:** Mobile-first approach scaling seamlessly to 4K desktop environments.
+- **Accessibility:** Fully ARIA compliant utilizing Radix UI primitives.
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js (v18.17.0 or higher)
+- npm or yarn
+
+### 1. Clone the repository
 ```bash
-node --version
-# Should be 18.0 or higher
+git clone https://github.com/your-org/ragaai-catalyst-dashboard.git
+cd ragaai-catalyst-dashboard
 ```
 
-If not installed → download from https://nodejs.org
-
----
-
-### Step 2 — Install dependencies
-
-Open terminal in this folder and run:
-
+### 2. Install Dependencies
 ```bash
 npm install
 ```
 
-This downloads all the packages listed in `package.json`. Takes 1-2 minutes.
-
----
-
-### Step 3 — Create environment file
-
-Create a file called `.env.local` in the root folder:
-
+### 3. Environment Configuration
+Copy the template environment file and add your Catalyst API credentials.
+```bash
+cp .env.example .env.local
 ```
-NEXT_PUBLIC_RAGAAI_BASE_URL=https://catalyst.raga.ai/api
+Update `.env.local`:
+```env
+NEXT_PUBLIC_RAGAAI_BASE_URL=https://api.catalyst.raga.ai/v1
 ```
 
-If you have a self-hosted instance, replace the URL with your own.
-
----
-
-### Step 4 — Start the development server
-
+### 4. Start Development Server
 ```bash
 npm run dev
 ```
-
-Open your browser at → **http://localhost:3000**
-
----
-
-### Step 5 — Login
-
-On the login page, enter your:
-- **Access Key** — from your RagaAI profile → Authenticate → Generate New Key
-- **Secret Key** — same place
+The application will be available at `http://localhost:3000`.
 
 ---
 
-## Build for Production
+## 🚢 Deployment
 
+This project is optimized for deployment on Vercel, but can be containerized or hosted on any Node.js environment.
+
+### Production Build
+To create an optimized production build:
 ```bash
 npm run build
-npm start
+npm run start
+```
+
+### Docker Deployment
+*(Dockerfile coming soon)*
+
+---
+
+## 📁 Directory Structure
+
+```text
+ragaai-catalyst-dashboard/
+├── src/
+│   ├── app/                 # Next.js App Router Pages & API Routes
+│   ├── components/          # Reusable UI components (Layout, UI primitives, Feature-specific)
+│   ├── lib/                 # Utility functions (Tailwind merge, formatting)
+│   ├── services/            # API client wrappers and endpoint definitions
+│   ├── store/               # Zustand global state slices
+│   └── types/               # Global TypeScript interfaces and types
+├── public/                  # Static assets (images, fonts, icons)
+├── tailwind.config.ts       # Tailwind theme and plugin configuration
+└── package.json             # Project dependencies and scripts
 ```
 
 ---
 
-## Project Structure
+## 🤝 Contributing
 
-```
-src/
-  app/                    ← Pages (Next.js App Router)
-    page.tsx              ← Login page
-    dashboard/
-      page.tsx            ← Overview dashboard
-      traces/page.tsx     ← Traces table
-      evaluations/        ← Evaluation runs
-      datasets/           ← Dataset management
-      prompts/            ← Prompt manager
-      guardrails/         ← Guardrail configuration
-      redteaming/         ← Red team tests
-      synthetic/          ← Synthetic data jobs
-      api-keys/           ← API key vault
-      settings/           ← App settings
-  components/
-    layout/               ← Sidebar, Topbar
-    ui/                   ← Button, Card, Badge, MetricCard
-  services/
-    api.ts                ← All backend API calls
-  store/
-    index.ts              ← Zustand global state
-  types/
-    index.ts              ← TypeScript types
-  lib/
-    utils.ts              ← Helper functions
-```
+We welcome contributions from the community! Please read our [Contributing Guidelines](CONTRIBUTING.md) to get started.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'feat: Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ---
 
-## Connecting to Real Backend
+## 📄 License
 
-All API calls are in `src/services/api.ts`.
-Each function matches the exact RagaAI Catalyst endpoint from the Python SDK.
-
-To use real data:
-1. Set `NEXT_PUBLIC_RAGAAI_BASE_URL` in `.env.local`
-2. Login with real access/secret keys
-3. The token is stored in `localStorage` and sent as `Bearer` header
-
----
-
-## Customization
-
-- **Colors** → `src/app/globals.css` (CSS variables)
-- **Dark/Light theme** → Toggle in top-right corner
-- **Sidebar** → Collapse with the arrow button
-- **Add a new page** → Create `src/app/dashboard/newpage/page.tsx`
-
----
+Distributed under the MIT License. See `LICENSE` for more information.
