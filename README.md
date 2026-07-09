@@ -62,7 +62,7 @@ This application is built with a focus on performance, type safety, and exceptio
 - **Responsive Design:** Mobile-first approach scaling seamlessly to 4K desktop environments.
 - **Accessibility:** Fully ARIA compliant utilizing Radix UI primitives.
 
----
+
 
 ## 🚀 Quick Start
 
