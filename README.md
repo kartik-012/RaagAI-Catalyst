@@ -41,7 +41,7 @@ Whether you are tracing complex agentic workflows, running offline evaluations, 
 *   **⚔️ Automated Red Teaming:** Run adversarial testing suites to uncover vulnerabilities in your LLM models before production deployment.
 *   **🧬 Synthetic Data Generation:** Seamlessly generate domain-specific training data utilizing state-of-the-art foundation models.
 
----
+
 
 ## 🏗️ Architecture & Tech Stack
 
