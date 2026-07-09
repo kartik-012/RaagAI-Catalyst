@@ -131,7 +131,7 @@ ragaai-catalyst-dashboard/
 └── package.json             # Project dependencies and scripts
 ```
 
----
+
 
 ## 🤝 Contributing
 
