@@ -143,7 +143,7 @@ We welcome contributions from the community! Please read our [Contributing Guide
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
----
+
 
 ## 📄 License
 
