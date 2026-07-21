@@ -62,7 +62,6 @@ This application is built with a focus on performance, type safety, and exceptio
 - **Accessibility:** Fully ARIA compliant utilizing Radix UI primitives.
 
 
-
 ## 🚀 Quick Start
 
 ### Prerequisites
