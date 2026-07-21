@@ -42,7 +42,6 @@ Whether you are tracing complex agentic workflows, running offline evaluations, 
 *   **🧬 Synthetic Data Generation:** Seamlessly generate domain-specific training data utilizing state-of-the-art foundation models.
 
 
-
 ## 🏗️ Architecture & Tech Stack
 
 This application is built with a focus on performance, type safety, and exceptional user experience.
